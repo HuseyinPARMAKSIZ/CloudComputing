@@ -19,8 +19,8 @@ This project sets up a complete monitoring environment using Docker Compose, inc
 
 Clone the repository:
 
-git clone https://github.com/ysbiyiklioglu/docker-prometheus-grafana-cms.git
-cd docker-prometheus-grafana-cms
+git clone https://github.com/HuseyinPARMAKSIZ/CloudComputing.git
+cd CloudComputing
 
 Start the services:
 
