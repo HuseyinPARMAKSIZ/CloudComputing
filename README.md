@@ -26,7 +26,13 @@ cd CloudComputing
 
 Start the services:
 
-docker-compose up -d
+sudo docker-compose up -d
+
+durdur - docker-compose down
+ağları uçur - docker network prune
+Her servisin Dockerfile’ına göre imajını yeniden oluşturur - docker-compose up --build
+arka planda (detached mode) başlat -  "-d" 
+
 
 🌐 Access Web Interfaces
 
