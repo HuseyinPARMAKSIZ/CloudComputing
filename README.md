@@ -21,6 +21,7 @@ This project sets up a complete monitoring environment using Docker Compose, inc
 Clone the repository:
 
 git clone https://github.com/HuseyinPARMAKSIZ/CloudComputing.git
+
 cd CloudComputing
 
 Start the services:
