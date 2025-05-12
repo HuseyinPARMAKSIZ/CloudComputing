@@ -1,6 +1,7 @@
 📊 CMS Monitoring Stack with Prometheus & Grafana
 
 This project sets up a complete monitoring environment using Docker Compose, including Joomla CMS instances with both MySQL and PostgreSQL support, Prometheus for metric collection, Grafana for visualization, and related exporters.
+
 🧱 Stack Components
 
     Joomla: Two separate CMS instances
