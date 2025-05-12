@@ -16,7 +16,18 @@ This project sets up a complete monitoring environment using Docker Compose, inc
 
     mysqld_exporter & postgres_exporter: Exporters for database metrics
 
+    node_exportor : for OS (operating system) metrics
+
 🚀 Getting Started
+
+sudo apt install docker.io
+
+sudo curl -L "https://github.com/docker/compose/releases/download/v2.36.0/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
+
+sudo docker-compose version
+
+Docker Compose version v2.36.0
+
 
 Clone the repository:
 
