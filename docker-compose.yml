@@ -1,4 +1,4 @@
-version: '3.8'
+#version: '3.8'
 
 services:
   # MYSQL
@@ -29,10 +29,17 @@ services:
   # MySQL Exporter
   mysqld_exporter:
     image: prom/mysqld-exporter
-    environment:
-      DATA_SOURCE_NAME: "root:rootpass@(mysql:3306)/"
+    #environment:
+      #DATA_SOURCE_NAME: "root:rootpass@(mysql:3306)/"
     ports:
-      - "9105:9105"
+      - "9105:9104"
+    #volumes:
+    #  - ./.my.cnf:/root/.my.cnf
+    command:
+      - "--mysqld.username=root"
+      - "--mysqld.address=mysql:3306"
+    environment:
+      MYSQLD_EXPORTER_PASSWORD: rootpass
     depends_on:
       - mysql
     networks:
@@ -50,6 +57,15 @@ services:
     networks:
       - monitoring
 
+  # Node Exporter (added)
+  node_exporter:
+    image: prom/node-exporter
+    container_name: node_exporter
+    ports:
+      - "9100:9100"
+    networks:
+      - monitoring
+
   # Prometheus
   prometheus:
     image: prom/prometheus
@@ -62,6 +78,7 @@ services:
     depends_on:
       - mysqld_exporter
       - postgres_exporter
+      - node_exporter
     networks:
       - monitoring
 
